@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="//dai4fhixfft7o.cloudfront.net/static/css/v1/storefront/tictail.css">
+<head profile="http://www.w3.org/2005/10/profile">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37976040-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link rel="icon"
+      type="image/png"
+      href="https://dl.dropbox.com/u/74151497/images/arrivals_favicon.ico">
+    <meta charset="utf-8" />
+    <link href='//fonts.googleapis.com/css?family=Crimson+Text:600' rel='stylesheet' type='text/css'>
+
+    <title>
+         {{ store_name }}
+    </title>
+        <!-- conditionally rendering a title-->
+    <style>
+         /* http://meyerweb.com/eric/tools/css/reset/ */
+        /* v1.0 | 20080212 */
+        /* Some slight modification to better fit the theme by Tictail */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+          outline: 0;
+          font-size: 100%;
+          vertical-align: baseline;
+          background: transparent;
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+          content: '';
+          content: none;
+        }
+
+        /* remember to define focus styles! */
+        :focus {
+          outline: 0;
+        }
+
+        /* remember to highlight inserts somehow! */
+        ins {
+          text-decoration: none;
+        }
+        del {
+          text-decoration: line-through;
+        }
+
+        /* tables still need 'cellspacing="0"' in the markup */
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        body {
+          line-height: 1;
+          color: #222;
+          margin: 0 auto;
+          width:898px;
+          font-family: Helvetica, Arial, "lucida Grande", sans-serif;
+          font-size: 13px;
+color: #666;
+line-height: 15px;
+            background: #efefef;
+        }
+
+
+        /* ******************************
+
+                    CORE CSS
+
+        ****************************** */
+
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        a:hover {
+            color: #444;
+
+        }
+
+
+
+        /* ******************************
+
+                Menu & Navigation
+
+        ****************************** */
+
+        header {
+          text-align: left;
+          margin: 30px 0 80px 0;
+        }
+
+        nav {
+
+          float: left;
+          width: 147px;
+            height: 500px;
+
+        }
+
+        nav li {
+            text-transform: uppercase;
+            padding-left: 5px;
+            padding-top: 2px;
+
+            background: black;
+            font-size: 12px;
+
+            color: #efefef;
+        }
+
+        nav li span {margin-top: 3px;}
+
+        nav li a:hover {
+            background: transparent;
+        }
+
+        nav li.parent {
+            margin: 3px 0 0 0;
+        }
+
+        nav a:hover {
+            background: transparent;
+          color: #ffffff;
+
+
+        }
+
+        li.selected.parent {
+
+        }
+
+        .child a, .child {
+            font-size: 11px;
+          color: #777;
+          font-weight: normal;
+          text-decoration: none;
+        }
+
+
+
+        hr {
+          height: 6px;
+          border: none;
+          background-color: black;
+          margin-bottom: 0px;
+          margin-top: 0px;
+        }
+
+        copyright {
+            text-align: left;
+          margin: 50px 0 80px 0;
+            background-color: black;
+        }
+
+
+        /* ******************************
+
+            Recycable class *wink
+
+        ****************************** */
+        .hidden {
+            display: none;
+        }
+
+        .clearfix {
+          display: block;
+        }
+        .clearfix:after {
+          content: ".";
+          clear: both;
+          visibility: hidden;
+          height: 1px;
+        }
+
+
+        /* ******************************
+
+                Typography
+
+        ****************************** */
+
+        #banner {
+
+            background-image: url(https://dl.dropboxusercontent.com/u/52490972/TOM-ARRIVALS.jpg);
+             background-repeat: no-repeat;
+      background-position: left top;
+      width:730px;
+      height:274px;
+      margin-bottom: 20px;
+      margin-left: 167px;
+
+
+
+            }
+
+        #logopic {
+            background-image: url(http://www.oystr.se/images/arrivals_logo.png);
+             background-repeat: no-repeat;
+      background-position: left top;
+      width:215px;
+      height:141px;
+      margin-top:-30px;
+      margin-bottom:-100px;
+        }
+
+        #logotype {
+            font-family: 'Crimson Text', serif;
+            text-transform: uppercase;
+            border-bottom: 4px solid #ccc;
+            margin: 0 auto;
+            display: inline;
+            }
+
+        #logotype a:hover {
+            color: #222;
+            text-decoration: none;
+            }
+
+
+        h1 {
+            font-size: 32px;
+            letter-spacing: -1px;
+
+            margin: 0 0 16px 0;
+            }
+
+        h2 {
+          font-size: 14px;
+            line-height: 18px;
+          font-weight: bold;
+          margin-bottom: 3px;
+        }
+
+       h3 {
+       padding-top: 5px;
+       padding-bottom: 5px;
+            font-size: 14px;
+          font-weight: normal;
+          color: #666;
+          line-height: 18px;
+          margin-top: 5px;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-family: 'Chau Philomene One', sans-serif;
+
+
+        }
+
+        .related {
+            font-size: 11px;
+          color: #777;
+            margin-left: 20px;
+        }
+
+        p {
+            font-size: 13px;
+            color: #666;
+          line-height: 15px;
+        }
+
+        p.copy {
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            font-size: 11px;
+            color: #666;
+            line-height: 15px;
+            background-color: black;
+        }
+
+        p span {
+            font-weight: normal;
+          font-size: 10px;
+          margin-left: 2px;
+        }
+
+        .pricetag {
+          font-size: 16px;
+            margin-top: 10px;
+          margin-bottom: 10px;
+            color: #222;
+        }
+
+        .price {font-size: 14px;}
+
+
+        /* ******************************
+
+                Search
+
+        ****************************** */
+
+
+        form.tictail_search {
+    float: right;
+}
+
+form.tictail_search input {
+background-color: white;
+
+
+  border: 0px solid #c7c7c7;
+  padding: 4px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100px;
+  color: #B7B7B7;
+  padding-left: 22px;
+  background: url(//d37kd4h5ot562g.cloudfront.net/vasuma/magglas.png) no-repeat 108px 3px;
+}
+
+form.tictail_search input:focus {
+
+}
+
+.results-box {
+  position: absolute;
+  z-index: 9999;
+  width: 240px;
+  margin-top: -3px;
+  background-color: #fff;
+  float: right;
+  display: inline-block;
+  border: 1px solid #d5d5d5;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+.results-box .searching {
+  padding: 10px;
+}
+
+.results-box div.item {
+  padding: 1px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.results-box div.item.last {
+  border-bottom: none;
+}
+
+.results-box a.result {
+  display: block;
+  min-height: 50px;
+  padding: 10px;
+  color: #262626;
+  text-decoration: none;
+}
+
+.results-box a.result:hover {
+  background-color: #eff0f1;
+}
+
+
+.results-box a.result span {
+  display: block;
+  white-space: nowrap;
+}
+
+.results-box a.result .thumb {
+  float: left;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  padding: 2px;
+  background-color: #fff;
+    line-height: 60px;
+}
+
+.results-box a.result .title {
+  padding-top: 2px;
+  font-size: 12px;
+}
+
+.results-box a.result .categories {
+  padding-top: 3px;
+  font-size: 11px;
+}
+
+.results-box a.result .price {
+  padding-top: 2px;
+  font-size: 11px;
+  font-weight: normal;
+  color: #666;
+}
+
+.results-box .no-results {
+  padding: 10px;
+}
+
+
+
+
+        /* ******************************
+
+                Add to cart
+
+        ****************************** */
+
+
+
+        .tictail_add_to_cart_button {
+          width: 120px;
+            height: 40px;
+          color: #f6f6f6;
+          background-color: #222;
+            border: none;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;
+            font-size: 11px;
+            margin: 30px 0 30px 0;
+            cursor: pointer;
+        }
+
+
+        .tictail_add_to_cart_button:hover{
+            background-color: #949594;
+        }
+
+
+        .tictail_add_to_cart_button:active{
+            background-color: #3595d5;
+        }
+
+
+        .currency {
+            font-size: 14px;
+          margin-left: 2px;
+          text-transform: uppercase;
+        }
+
+         select {
+            margin: 0;
+            margin-top: 20px;
+        }
+
+
+        /* ******************************
+
+                Product listings
+
+        ****************************** */
+
+         .description {
+            width: 231px;
+        }
+
+     .description h2 { font-size: 20px; padding-bottom: 10px;}
+
+
+        .listing {
+            float: left;
+          width: 751px;
+        }
+
+        .listing li {
+            float: left;
+            width: 230px;
+            overflow: hidden;
+          margin-left: 20px;
+          margin-bottom: 15px;
+        }
+
+
+        .productpage {
+            float: left;
+            width: 751px;
+        }
+
+        .productpage li {
+          float: left;
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
+
+        .listing li a:hover img {
+          opacity:0.9;
+          filter:alpha(opacity=90);
+        }
+
+        .listing li a:hover {
+          text-decoration: none;
+        }
+
+        .crop {
+        background-color: #f6f6f6;
+        max-width: 230px;
+
+        overflow: hidden;
+        text-align: center;
+        }
+
+        .crop img {
+        max-width: 230px;
+
+
+        }
+
+        .prodthumb {
+        width: 480px;
+        height: auto;
+        overflow: hidden;
+        }
+        .prodthumb img {
+            max-width: 480px;
+            height: auto;
+        }
+
+
+        /* ******************************
+
+                    Terms
+
+        ****************************** */
+
+        .productpage ul.terms {
+            clear: both;
+        }
+
+        .productpage .terms li{
+            float: none;
+            clear: both;
+            margin: 0;
+          font-size: 9px;
+          text-transform: uppercase;
+          font-weight: normal;
+          color: #999;
+        }
+
+
+        .page_container {
+
+        margin-left: 175px;
+
+        padding-bottom: 50px;
+
+        }
+
+        .page_container h1 {
+
+          font-family: 'Chau Philomene One', sans-serif;
+          font-size: 18px;
+          text-transform: uppercase;
+
+        }
+
+        .page_container p {
+
+        font-size: 12px;
+color: #666;
+line-height: 15px;
+
+}
+
+.search { padding-top: 10px; }
+
+#contact_nav {
+text-transform: uppercase;
+padding-left: 5px;
+margin-top: 3px;
+padding-top: 2px;
+background: black;
+font-size: 12px;
+color: #EFEFEF;}
+
+#rightblog { text-align: right;}
+#rightblog span a {text-transform: uppercase;
+
+padding: 3px;
+background: black;
+font-size: 12px;
+color: #EFEFEF;
+
+}
+
+     #aboutblog { text-transform: uppercase;
+padding-left: 5px;
+padding-top: 2px;
+background: black;
+font-size: 12px;
+color: #EFEFEF;
+
+
+
+    </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+</head>
+<link href='http://fonts.googleapis.com/css?family=Chau+Philomene+One' rel='stylesheet' type='text/css'>
+<hr>
+
+<body>
+
+<div class="search">{{search}} </div>
+
+<header>
+<a href="{{store_url}}">
+  <div id="logopic">
+
+
+
+
+  </div>
+
+    </a>
+</header>
+    <div id="rightblog"><a href='http://www.youngart.se'target="_blank";><img src='http://www.oystr.se/images/young_art.png'></a><br><br>
+
+   <span>
+   <div class="aboutblog">
+    <a href="http://www.arrivals.se/page/about">ABOUT</a>
+
+
+    <a href="http://youngart.se/section/blog"target="_blank">BLOG<br></a></div>
+    <br>
+    </span>
+    </div>
+
+<!--    Setting #navigation? to see if the #navigation block contains any information  -->
+{{#navigation?}}
+
+<!--    If #navigation contains data <nav> and <ul> is printed before the #navigation loop  -->
+        <nav>
+      <ul>
+        <li>
+          <a href="{{store_url}}/products">All Items</a>
+        </li>
+
+                <!--    Once the wrapping elements have been put in I open the #navigation block to loop through the menu items of the store -->
+        {{#navigation}}
+          <li class="parent {{#is_current}}selected{{/is_current}}"><!-- #is_current let's me know if this is the current menu option -->
+            <a href="{{ url }}">
+                            {{label}}
+                        </a>
+                        {{#is_current}}
+          {{#children?}}<!-- #children? asks if the current Navigation item contains a submenu -->
+            <ul>
+                {{#children}}
+                  <li class="child {{#is_current}}selected{{/is_current}}">
+                    <a href="{{ url }}">{{label}}</a>
+                  </li>
+                {{/children}}
+            </ul>
+          {{/children?}}
+                    {{/is_current}}
+                    </li>
+        {{/navigation}}
+
+                <div id="contact_nav">
+          <a href="{{store_url}}/page/contact">Contact</a>
+        </div>
+
+      </ul>
+
+    </nav>
+
+
+{{/navigation?}}
+
+
+<!-- A handy pointer is that you can add a ? to all #block variables, if the selected block contains any data the block will be rendered -->
+
+
+
+{{#list_page}}
+<!-- To keep Tictail themes simple and quick to design and develop we contain all pages in blocks. The two main pages of a theme is #list_page and #product_page -->
+
+    <a href="http://www.arrivals.se">
+<div id="banner"> </div>
+</a>
+
+<ul class="listing">
+
+
+ {{#products}} <!-- Products loops through all products from the current list -->
+  <li>
+    <a href="{{url}}"> <!-- The variable URL renders a link to the productpage of the specific item -->
+            {{#primary_image}}<!-- #primary_image is the block containing the data for the primary image of the specific item -->
+                <div class="crop">
+                    <img src="{{url-300}}" alt="{{title}}"/><!-- url-300 will return a URL for a primary image with <= 300px dimensions -->
+
+                    <!--
+                    The dimensions that are available for images through the url-xxx variable are;
+                    • url-50
+                    • url-100
+                    • url-300
+                    • url-500
+                    • url-1000
+                    • url-2000
+
+                    Try not to use higher resolutions than you require for a better user experience...
+                    -->
+
+                </div>
+        {{/primary_image}}
+
+        <h3>
+                {{title}}
+            </h3>
+            <p class="price">
+                  {{price_with_currency}} <!--  Some Tictail template variables contain html, price_with_currency is one of these and will contain the currency code in a span. Doesn't get any easier? -->
+                  </p>
+
+
+    <br><br>
+        <hr>
+  </li>
+ {{/products}}
+</ul>
+{{/list_page}}
+
+<!-- THIS IS THE ABOUT -->
+{{#about_page}}
+
+<article id="about" class="page_container">
+        <h1>About</h1>
+
+        <div class="html_content">
+            {{store_description}}
+        </div>
+    </article>
+{{/about_page}}
+
+<!-- THIS IS THE FAQ -->
+{{#faq_page}}
+<article id="faq" class="page_container">
+
+
+<h1>FAQ</h1>
+<p>
+<h2>Does the price include taxes and shipment?</h2>
+Yes. Each work prized on ARRIVALS includes local taxes and safe delivery
+</p>
+<br>
+<p>
+<h2>How long time will it take before I get my piece?</h2>
+The delivery time depends on where you live. Expect about two to three week delivery unless otherwise specified. Often your order will arrive faster.
+</p>
+<br>
+<p>
+<h2>Is the artwork available in variety of sizes?</h2>
+The work on ARRIVALS is only available in one size unless other is remarked.
+</p>
+<br>
+<p>
+<h2>Is it possible to see the artwork "live" before buying it online?</h2>
+Yes. You are more than welcome to drop by our headquarters, NAU gallery, at Hudiksvallsgatan 4b in Stockholm. There you can see an example of all the work sold on ARRIVALS, and even buy it right away!
+NAU gallery is open Wed-Fri, 12.00 - 18.00 and Sat-Sun, 12.00-16.00
+</p>
+<br>
+<p>
+<h2>How is the piece packaged?</h2>
+All pieces sold on ARRIVALS are delivered safely, packed in silk paper and a sturdy cardboard tube.
+</p>
+<br>
+<p>
+<h2>What happens if I am not happy with my purchase?</h2>
+ARRIVALS offers a 14 days full return on pieces as long as the piece is still in mint condition. This does however not apply for photographs, which are print-on-demand.
+</p>
+<br>
+<p>
+<h2>What does "signed and limited edition" mean?</h2>
+This means that the work is signed by the artist, and printed only in a limited number of copies. When the edition is sold out it won’t be available for purchase again.
+</p>
+<br>
+<p>
+<h2>If a piece is "sold out" what does it mean?</h2>
+If it says that piece is sold out it means that the total limited edition is sold out and that it won’t be available for purchase again.
+</p>
+</article>
+
+{{/faq_page}}
+
+<!-- THIS IS THE CONTACT PAGE -->
+{{#contact_page}}
+<article id="contact" class="page_container">
+
+<h1>CONTACT</h1>
+<h2>For press enquiries:</h2>
+<p>
+irena@youngart.se
+</p>
+<p>
++46(0)76 400 74 06
+</p>
+<br>
+<p>
+<h2>For questions or comments:</h2>
+</p>
+<p>
+hello@arrivals.se
+</p>
+</article>
+
+{{/contact_page}}
+
+
+{{#product_page}} <!-- This is the page that will be rendered for every item -->
+    <ul class="productpage">
+    <div class="productpage">
+        {{#product}}
+            <li>
+                <div class="prodthumb">
+                    {{#primary_image}}
+                        <a id="{{id}}" href="{{url-2000}}">
+                            <img src="{{url-1000}}" alt="{{title}}" />
+                        </a>
+                    {{/primary_image}}
+
+
+                </div>
+
+          </li>
+          <li class="description">
+            <h2>
+                    {{title}}
+                </h2>
+            <p class="pricetag">
+                    {{price_with_currency}}
+                </p>
+            <p>
+                    {{description}}
+                </p>
+                {{#add_to_cart}}
+                <!-- #add_to_cart contains the necessary data to add an item to your cart,
+                please take notice that #add_to_cart requires both #variations and #add_to_cart_button to function-->
+                    <div class="variations">
+                        {{#variations_select}}
+                        <!-- #variations_select renders a html select nested in a form,
+                        #variations_radio renders the same functionality but with a radio button rather than a select dropdown -->
+                        {{/variations_select}}
+                    </div>
+                    {{#add_to_cart_button}} <!-- #add_to_cart_button renders a 'button' which on click will add the current product to your cart -->
+                        <h4 style="-webkit-font-smoothing: antialiased;">
+                        BUY IT<h4>
+                    {{/add_to_cart_button}}
+                {{/add_to_cart}}
+
+
+              <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_pinterest"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-5023c40f6b90b6c6"></script>
+<!-- AddThis Button END -->
+
+
+
+
+            <ul class="terms">
+                <br>
+              <li>
+                        {{#return_policy}}
+                            Return Policy
+                        {{/return_policy}}
+                    </li>
+              <li>
+                        {{#terms}}
+                            Terms & conditions
+                        {{/terms}}
+                    </li>
+            </ul>
+
+          </li>
+
+
+            {{#all_images?}}
+                <div class="product{{id}}">
+                <!-- #all_images renders data for all images of an item -->
+                {{#all_images}}
+                    <a rel="{{id}}" href="{{url-2000}}" class="fullscreen"></a>
+                {{/all_images}}
+                </div>
+            {{/all_images?}}
+
+            <script>
+            $('#{{id}}').click(function (e){
+                e.preventDefault();
+                $('div.product{{id}}').children('a:first-child').trigger('click');
+            });
+
+            </script>
+
+        {{/product}}
+    </div>
+
+    <div class="clearfix"></div>
+
+
+
+    {{#related_products?}}
+    <div class="related">
+    <p>
+        You might also like...
+    </p>
+    <br>
+    <hr />
+    <br>
+    </div>
+    <ul class="listing">
+        {{#related_products}}
+        <!-- #related_products is only available under the #product_page and will render <3 related products based on the Menu items of the item,
+        the same variables as for #product are once again available here -->
+            <li>
+                <a href="{{url}}">
+                    {{#primary_image}}
+                        <div class="crop">
+                            <img src="{{url-300}}" alt="{{title}}"/>
+                        </div>
+                {{/primary_image}}
+                <h3>
+                        {{title}}
+                    </h3>
+                  <p class="price">
+                        {{price_with_currency}}
+                    </p>
+            </a>
+            </li>
+        {{/related_products}}
+    {{/related_products?}}
+    </ul>
+    </ul>
+
+
+
+
+
+{{/product_page}}
+
+<!--
+FOOTER
+-->
+
+<div style='width: 898px;'>
+
+
+
+<div style='float: left; width: 898px; margin-right: 0px;'>
+<br><br>
+<hr>
+<br>
+    </div>
+
+</div>
+
+<div>
+
+
+
+
+    <div style='width: 898px;'>
+
+<div style='float: left; width: 240px; margin-right: 40px;'>
+
+<p>
+
+
+<a href="http://www.arrivals.se/page/about">ABOUT</a><br>
+<a href="http://youngart.se/section/blog">BLOG</a><br>
+
+
+<a href="http://www.arrivals.se/page/contact">CONTACT US</a> <br>
+{{#terms}}
+TERMS & CONDITIONS
+{{/terms}}
+<br><a href="http://www.arrivals.se/page/faq">FAQ</a> <br>
+
+</p>
+
+</div>
+
+<div style='float: left; width: 338px; margin-right: 40px;'>
+
+<p>ARRIVALS art shop offers limited edition art by contemporary artists, graphic designers and photographers. We believe that art should be fun and accessible. And it shouldn’t cost a fortune!  </p>
+
+</div>
+
+<div style='float: left; width: 240px;'>
+
+<p><a href="https://twitter.com/young_art" target="_blank">FOLLOW US ON TWITTER</a></p>
+<p><a href="https://www.facebook.com/arrivalsartshop" target="_blank">LIKE US ON FACEBOOK</a></p>
+<br>
+
+
+</div>
+
+<div style='clear: left;'></div>
+
+<div style='width: 898px;'>
+
+
+
+<p class='copy'>
+
+
+
+<br>© 2013 Young Art.<br>
+
+
+</p>
+
+</div>
+
+</div>
+<br>
+</div>
+
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $('#slideshow').click(function(e) {
+    e.preventDefault();
+    $('#next_images a:first').trigger('click');
+  });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $('#slideshow').click(function(e) {
+    e.preventDefault();
+    $('#next_images a:first').trigger('click');
+  });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://dl.dropbox.com/u/74151497/scripts/jquery-1.7.1.min.js"></script>
+<script src="http://dl.dropbox.com/u/1602173/tt/jquery.masonry.min.js"></script>
+<script>
+
+var $container = $('.listing');
+
+
+$container.imagesLoaded(function(){
+
+$container.masonry({
+
+
+
+      isFitWidth: true
+
+  });
+
+
+});
+
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+1337
+
+Want to create your own Tictail theme?
+Find the latest Tictail theme variables here: https://docs.google.com/spreadsheet/ccc?key=0As7w_cmRqrERdEFmOFhOUnN0UFZSc2I1NnVFUUpuRmc
+
+We're working on creating a more complete and easy to work with template language, please contact dev@tictail.com with feedback, comments or thoughts. We appeciate it, a lot!
+
+-->
+
+
+
+
+
+
+
+
+

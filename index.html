@@ -3,42 +3,347 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Arrivals</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <title>
+      {{#list_page}}
+        {{#navigation}}
+          {{#is_current}}
+            {{#children}}
+              {{#is_current}}
+                {{label}} &middot;
+              {{/is_current}}
+            {{/children}}
+          {{/is_current}}
+        {{/navigation}}
+
+        {{store_name}}
+      {{/list_page}}
+
+      {{#product_page}}
+        {{#product}}
+          {{title}} &middot; {{store_name}}
+        {{/product}}
+      {{/product_page}}
+
+      {{#about_page}}
+        About &middot; {{store_name}}
+      {{/about_page}}
+    </title>
+    <link rel="stylesheet" href="http://trollback.se/anton/lab/arrivals/css/style.css">
+    <link href="http://trollback.se/anton/lab/arrivals/favicon.ico" rel="shortcut icon">
+
+    <!-- CLEAN HTML FILE: view-source:http://anton.trollback.se/lab/arrivals/index.html -->
+
   </head>
   <body>
 
 
-    <header class="header">
-      <a class="header-logo" href="#">
-        <img src="img/logo.png" alt="Arrivals">
+  <!--[if lte IE 8]>
+    <p class="browse-happy">
+      Sorry, but you are using an <strong>outdated</strong> browser. You will not be able to visit this website unless you <a href="http://browsehappy.com/">upgrade your browser</a>.
+    </p>
+  <![endif]-->
+
+
+    <!-- =================================================
+         Page header
+    ================================================== -->
+
+    <header class="header clearfix">
+      <a class="header-logo" href="{{store_url}}">
+        <img src="http://trollback.se/anton/lab/arrivals/img/logo.png" alt="{{store_name}}">
       </a>
 
       <nav>
-        <ul>
-          <li><a href="#">Artists</a></li>
-          <li><a href="#">All items</a></li>
-          <li><a href="#">Filter</a></li>
+        <ul class="nav clearfix">
+          <li><a href="/#artists">Artists</a></li>
+          <li><a href="/#filter-all">All  items</a></li>
+          <li><a href="/#filter">Filter</a></li>
         </ul>
       </nav>
 
+      <div class="search clearfix">
+        <label for="tictail_search_box">Search</label>
+        {{search}}
+      </div>
     </header>
 
+    <!-- Page side links
+    ================================================== -->
+
+    <div class="left-side">
+      <a href="/about" class="side-item wow-link">About</a>
+      {{#list_page}}
+        {{#on_index}}
+          <span class="side-item side-bg">All items are moveable <img src="http://trollback.se/anton/lab/arrivals/img/hand.png" alt=""></span>
+        {{/on_index}}
+      {{/list_page}}
+    </div>
+
+    <div class="right-side">
+      <a href="#" class="side-item">Sign up for our newsletter! <img src="http://trollback.se/anton/lab/arrivals/img/paper.png" alt=""></a>
+      <a href="http://www.youngart.se" class="side-item">A paper of <img src="http://trollback.se/anton/lab/arrivals/img/young-art.png" alt="Young Art"></a>
+    </div>
 
 
+    <!-- =================================================
+         Main content
+    ================================================== -->
+
+    <main class="clearfix">
+
+      {{#list_page}}
+
+        <!-- List page
+        ================================================== -->
+
+        <div class="intro">
+          <strong class="intro-sub">{{store_name}}</strong>
+          {{#current_navigation}}
+            <h1>{{label}}</h1>
+          {{/current_navigation}}
+        </div>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+        {{#on_index}}
 
-    <script> /*
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview'); */
+          <!-- Filters and list of artists on index page  -->
+
+          <ul class="inline-list peek-links">
+            {{#navigation}}
+              {{#children}}
+                <li><a href="{{url}}">{{label}}</a></li>
+              {{/children}}
+            {{/navigation}}
+          </ul>
+
+          <div class="filter">
+            Filter:
+            <ul>
+              <li class="is-active"><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".is-random">Random</a></li>
+              <li><a href="#" data-filter=".is-latest" data-sorting="original-order">New Arrivals</a></li>
+            </ul>
+          </div>
+        {{/on_index}}
+
+        <!-- List of products  -->
+
+        <div class="product-list-wrap">
+          <div class="product-list">
+            {{#products}}
+              <a class="product is-hidden" href="{{url}}" data-id="{{identifier}}">
+                {{#primary_image}}
+                  <img src="{{url-300}}">
+                {{/primary_image}}
+                <span>{{title}}</span>
+                <span>by <span class="js-artist">{{title}}</span></span>
+                <span>{{price_without_currency}} {{currency_code}}</span>
+              </a>
+            {{/products}}
+          </div>
+        </div>
+
+        {{^on_index}}
+
+          <!-- Bio on artist pages -->
+
+          <div class="info-window js-bio"></div>
+        {{/on_index}}
+      {{/list_page}}
+
+      {{#product_page}}
+        {{#product}}
+
+          <!-- Single product page
+          ================================================== -->
+
+          <article>
+            <div class="intro">
+              <strong class="intro-sub">{{store_name}}</strong>
+              <h1>{{title}}</h1>
+              <span class="intro-small">by <span class="js-artist"></span></span>
+            </div>
+
+
+            <div class="primary clearfix">
+              {{#primary_image}}
+                <img src="{{url-1000}}">
+                <div class="clearfix">
+                  <div class="primary-left"><span class="js-dimentions"></span></div>
+                  <div class="primary-right">Editions: <span class="js-editions"></span></div>
+                </div>
+              {{/primary_image}}
+
+              {{#in_stock}}
+                <div class="primary-wow">{{price_without_currency}} {{currency_code}}</div>
+                {{#add_to_cart}}
+                  {{#add_to_cart_button}}<img src="http://trollback.se/anton/lab/arrivals/img/buy.png" alt="Buy it">{{/add_to_cart_button}}
+                  <!--{{#variations_select}}{{/variations_select}}-->
+                {{/add_to_cart}}
+              {{/in_stock}}
+              {{#out_of_stock}}
+                <div class="primary-wow">Sold out</div>
+              {{/out_of_stock}}
+              <div class="primary-body">Technique:<br><span class="js-technique"></span></div>
+
+              {{#related_products}}
+                <div class="primary-aside">
+                  <div class="related">
+                    <h4>You might also like:</h4>
+                      {{#product}}
+                        <a class="related-item" href="{{url}}" title="{{title}}">
+                          {{#primary_image}}
+                            <img src="{{url-300}}">
+                          {{/primary_image}}
+                        </a>
+                      {{/product}}
+                  </div>
+                </div>
+              {{/related_products}}
+            </div>
+
+            <div class="info-window js-bio"></div>
+
+            {{social_buttons}}
+
+          </article>
+        {{/product}}
+      {{/product_page}}
+
+      {{#about_page}}
+
+        <!-- About page
+        ================================================== -->
+
+        <article>
+          <div class="intro">
+            <strong class="intro-sub">{{store_name}}</strong>
+            <h1>About</h1>
+
+            <div class="intro-left">
+              For press enquiries: <br>
+              <a href="mailto:irena@youngart.se">irena@youngart.se</a><br>
+              +46(0)76 400 74 06
+            </div>
+            <div class="intro-right">
+              For questions <br>or comments: <br>
+              <a href="mailto:hello@arrivals.se">hello@arrivals.se</a>
+            </div>
+          </div>
+
+          <div class="content">
+            <h2>Say hello to <span class="uppercase">{{store_name}}</span> and goodbye to empty walls, crazy price tags and mass-produced art.</h2>
+            {{store_description}}
+          </div>
+
+        </article>
+      {{/about_page}}
+
+      {{#faq_page}}
+
+        <!-- FAQ page
+        ================================================== -->
+
+        <article>
+          <div class="intro">
+            <strong class="intro-sub">{{store_name}}</strong>
+            <h1>FAQ</h1>
+
+            <div class="intro-left">
+              For press enquiries: <br>
+              <a href="mailto:irena@youngart.se">irena@youngart.se</a><br>
+              +46(0)76 400 74 06
+            </div>
+            <div class="intro-right">
+              For questions <br>or comments: <br>
+              <a href="mailto:hello@arrivals.se">hello@arrivals.se</a>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="content-col">
+              <h2>Does the price include taxes and shipment?</h2>
+              <p>Yes. Each work prized on <span class="uppercase">{{store_name}}</span> includes local taxes and safe delivery</p>
+
+              <h2>Is it possible to see the artwork "live" before buying it online?</h2>
+              <p>Yes. You are more than welcome to drop by our headquarters, NAU gallery, at <a href="https://www.google.com/maps/place/Hudiksvallsgatan+4/@59.3460369,18.0381476,17z/data=!3m1!4b1!4m2!3m1!1s0x465f9d76dc1caefb:0xbe41347574886e31">Hudiksvallsgatan 4b in Stockholm</a>. There you can see an example of all the work sold on ARRIVALS, and even buy it right away! <br> NAU gallery is open: <br> Wed-Fri, 12.00–18.00 <br> Sat-Sun, 12.00–16.00</p>
+
+              <h2>What does "signed and limited edition" mean?</h2>
+              <p>This means that the work is signed by the artist, and printed only in a limited number of copies. When the edition is sold out it won’t be available for purchase again.</p>
+            </div>
+            <div class="content-col middle">
+              <h2>How long time will it take before I get my piece?</h2>
+              <p>The delivery time depends on where you live. Expect about two to three week delivery unless otherwise specified. Often your order will arrive faster.</p>
+
+              <h2>How is the piece packaged?</h2>
+              <p>All pieces sold on ARRIVALS are delivered safely, packed in silk paper and a sturdy cardboard tube.</p>
+
+              <h2>If a piece is "sold out" what does it mean?</h2>
+              <p>If it says that piece is sold out it means that the total limited edition is sold out and that it won’t be available for purchase again.</p>
+            </div>
+            <div class="content-col">
+              <h2>Is the artwork available in variety of sizes?</h2>
+              <p>The work on ARRIVALS is only available in one size unless other is remarked.</p>
+
+              <h2>What happens if I am not happy with my purchase?</h2>
+              <p>ARRIVALS offers a 14 days full return on pieces as long as the piece is still in mint condition. This does however not apply for photographs, which are print-on-demand.</p>
+            </div>
+          </div>
+        </article>
+      {{/faq_page}}
+
+    </main>
+
+
+    <!-- =================================================
+         Page footer
+    ================================================== -->
+
+    <footer class="footer">
+      <ul>
+        <li>© 2014 Young Art</li>
+        <li>{{#terms}}Terms & conditions{{/terms}}</li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </footer>
+
+
+    <!-- =================================================
+         Lé JavaScript
+    ================================================== -->
+
+    <script>
+      var DATA_DESC = {
+        {{#list_page}}
+          {{#products}}
+            '{{identifier}}': {
+              'desc': {{description_encoded}}
+            },
+          {{/products}}
+        {{/list_page}}
+        {{#product_page}}
+          {{#product}}
+            '{{identifier}}': {
+              'desc': {{description_encoded}}
+            },
+          {{/product}}
+        {{/product_page}}
+        'last': false
+      }
+    </script>
+
+    <script src="http://trollback.se/anton/lab/arrivals/js/plugins.js"></script>
+    <script src="http://trollback.se/anton/lab/arrivals/js/script.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37976040-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
   </body>
 </html>
