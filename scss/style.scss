@@ -645,13 +645,13 @@ img {
     }
   }
 
-  li:nth-child(2n) img { top: -180%; left: -80%; }
-  li:nth-child(3n) img { top: -160%; left: 105%; }
-  li:nth-child(5n) img { top: -140%; left: -130%; }
-  li:nth-child(6n) img { top: 135%; left: 115%; }
-  li:nth-child(8n) img { top: -220%; left: 105%; }
-  li:nth-child(12n) img { top: -180%; left: -115%; }
-  li:nth-child(15n) img { top: 160%; left: -105%; }
+  li:nth-child(2n) img { top: 30px; left: -80px; }
+  li:nth-child(3n) img { top: -60px; right: -106px; left: auto; }
+  li:nth-child(5n) img { top: -65px; right: -100px; left: auto; }
+  li:nth-child(6n) img { top: 60px; right: -100px; left: auto; }
+  li:nth-child(8n) img { top: 60px; left: 10px; }
+  li:nth-child(12n) img { top: 70px; left: auto;right: -30px; }
+  li:nth-child(15n) img { top: -145px; left: 40%; }
 }
 
 /**
