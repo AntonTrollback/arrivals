@@ -1,16 +1,16 @@
 /*!
  *
- *
  * Anton Trollbäck
  * http://anton.trollback.se
  *
- * SCSS FILE: http://anton.trollback.se/lab/arrivals/scss/style.scss
- *
+ * View of github: https://github.com/AntonTrollback/arrivals
  *
  */
 
 /* Setup
    -------------------------------------------------------------------------- */
+
+@import "compass/css3";
 
 $pink: #ff3b7a;
 
@@ -19,7 +19,6 @@ $pink: #ff3b7a;
 /* Custom font
    -------------------------------------------------------------------------- */
 
-@import "compass/css3";
 @include font-face(
   'tablet-gothic-bold',
   inline-font-files(
@@ -284,7 +283,7 @@ img {
 }
 
 /**
- * Side elements
+ * Page side elements
  */
 
 .left-side,
@@ -358,7 +357,7 @@ img {
 }
 
 /**
- * Wow link
+ * "wow" link
  */
 
 .wow-link {
@@ -418,7 +417,7 @@ img {
 }
 
 /**
- * Footer
+ * Page footer
  */
 
 .footer {
@@ -492,7 +491,7 @@ img {
 }
 
 /**
- * Intro window
+ * Info text window
  */
 
 .info-window {
@@ -616,7 +615,7 @@ img {
 }
 
 /**
- * Peel links
+ * Peek links
  */
 
 .peek-links {
@@ -739,7 +738,7 @@ img {
 }
 
 /**
- * Content
+ * Primary text content
  */
 
 .content {
@@ -769,7 +768,7 @@ img {
 }
 
 /**
- * Browse happy banner
+ * Browse Happy banner
  */
 
 .browse-happy {
@@ -790,9 +789,8 @@ img {
   }
 }
 
-/**
- * Tweak Tictail styles
- */
+/* Tweaked Tictail styles
+   -------------------------------------------------------------------------- */
 
 #tt_colophon {
   top: 5px !important;
@@ -816,7 +814,7 @@ img {
 }
 
 /**
- * Tictail styles for search results (tweaked)
+ * Tictail search results
  */
 
 .tictail_search {
@@ -898,7 +896,7 @@ img {
 }
 
 /**
- * Tictail styles for social buttons (tweaked)
+ * Tictail social buttons
  */
 
 .tictail_social_buttons {
