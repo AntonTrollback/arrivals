@@ -383,7 +383,7 @@
             .toLowerCase();
 
           // If they mach, clone the image and append it to the link
-          if (text === itemText) {
+          if (itemText.indexOf(text) !== -1) {
             var img = item.querySelector("img");
             link.appendChild(img.cloneNode(true));
           }
