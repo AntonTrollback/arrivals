@@ -80,8 +80,8 @@
     </div>
 
     <div class="right-side">
-      <a href="#" class="side-item">Sign up for our newsletter! <img src="http://trollback.se/anton/lab/arrivals/img/paper.png" alt=""></a>
-      <a href="http://www.youngart.se" class="side-item">A paper of <img src="http://trollback.se/anton/lab/arrivals/img/young-art.png" alt="Young Art"></a>
+      <a href="http://youngart.us5.list-manage.com/subscribe?u=1ea35bd37eb8dd8b06e6e854a&id=a8abaf24a5" class="side-item">Sign up for our newsletter! <img src="http://trollback.se/anton/lab/arrivals/img/paper.png" alt=""></a>
+      <a href="http://www.youngart.se" class="side-item">A part of <img src="http://trollback.se/anton/lab/arrivals/img/young-art.png" alt="Young Art"></a>
     </div>
 
 
@@ -186,20 +186,20 @@
               {{/out_of_stock}}
               <div class="primary-body">Technique:<br><span class="js-technique"></span></div>
 
-              {{#related_products}}
+              {{#related_products?}}
                 <div class="primary-aside">
                   <div class="related">
                     <h4>You might also like:</h4>
-                      {{#product}}
+                      {{#related_products}}
                         <a class="related-item" href="{{url}}" title="{{title}}">
                           {{#primary_image}}
                             <img src="{{url-300}}">
                           {{/primary_image}}
                         </a>
-                      {{/product}}
+                      {{/related_products}}
                   </div>
                 </div>
-              {{/related_products}}
+              {{/related_products?}}
             </div>
 
             <div class="info-window js-bio"></div>
